@@ -1,0 +1,41 @@
+{
+  "name": "MultiLiteral",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:k06a/truffle-string-multi-literal.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.0.0-rc.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.22.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "eth-gas-reporter": "^0.2.22",
+    "ganache-cli": "^6.12.2",
+    "@openzeppelin/test-helpers": "^0.5.10",
+    "solc": "^0.8.2",
+    "solidity-coverage": "^0.7.16",
+    "ethlint": "^1.2.5",
+    "truffle": "^5.2.5",
+    "truffle-flattener": "^1.5.0"
+  },
+  "scripts": {
+    "test": "scripts/test.sh",
+    "coverage": "scripts/coverage.sh && cat coverage/lcov.info | coveralls",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix",
+    "lint:sol": "solium -d .",
+    "lint:sol:fix": "solium -d . --fix",
+    "lint": "npm run lint:js && npm run lint:sol",
+    "lint:fix": "npm run lint:js:fix && npm run lint:sol:fix"
+  }
+}
